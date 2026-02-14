@@ -1,4 +1,5 @@
 import type { User, Session } from 'better-auth';
+import { drizzle } from 'drizzle-orm/d1';
 
 // See https://svelte.dev/docs/kit/types#app.d.ts
 // for information about these interfaces
@@ -8,13 +9,21 @@ declare global {
 			env: Env;
 			ctx: ExecutionContext;
 			caches: CacheStorage;
-			cf?: IncomingRequestCfProperties
+			cf?: IncomingRequestCfProperties;
+			context: {
+				waitUntil(promise: Promise<any>): void;
+			};
 		}
 
-		interface Locals { user?: User; session?: Session }
+		interface Locals {
+			user?: User;
+			session?: Session;
+		}
 
 		// interface Error {}
-		// interface Locals {}
+		interface Locals {
+			db: ReturnType<typeof drizzle>;
+		}
 		// interface PageData {}
 		// interface PageState {}
 		// interface Platform {}

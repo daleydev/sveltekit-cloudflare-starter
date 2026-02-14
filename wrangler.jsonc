@@ -18,7 +18,8 @@
 		{
 			"binding": "DB", // access via event.platform.env.DB in server code
 			"database_name": "",
-			"database_id": ""
+			"database_id": "",
+			"migrations_dir": "./src/lib/server/db/migrations"
 		}
 	]
 }

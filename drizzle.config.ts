@@ -5,11 +5,11 @@ export default defineConfig({
 	out: './src/lib/server/db/migrations',
 	dialect: 'sqlite',
 	driver: 'd1-http',
+	verbose: true,
+	strict: true,
 	dbCredentials: {
 		accountId: process.env.CLOUDFLARE_ACCOUNT_ID!,
 		databaseId: process.env.CLOUDFLARE_D1_DATABASE_ID!,
 		token: process.env.CLOUDFLARE_API_TOKEN!
-	},
-	verbose: true,
-	strict: true
+	}
 });
