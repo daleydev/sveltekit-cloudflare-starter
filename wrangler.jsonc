@@ -9,10 +9,11 @@
 		"directory": ".svelte-kit/cloudflare"
 	},
 	"build": {
-		"command": "npm run build"
+		"command": "pnpm run build"
 	},
-	"workers_dev": true,
-	"preview_urls": true,
+	"observability": {
+		"enabled": true
+	},
 	"d1_databases": [
 		{
 			"binding": "DB",
