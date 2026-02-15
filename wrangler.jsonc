@@ -17,9 +17,10 @@
 	"d1_databases": [
 		{
 			"binding": "DB", // access via event.platform.env.DB in server code
-			"database_name": "",
-			"database_id": "",
-			"migrations_dir": "./src/lib/server/db/migrations"
+			"database_name": "test-db",
+			"database_id": "c5ae6247-bdf8-4c19-8706-c327f9951e3e",
+			"migrations_dir": "./src/lib/server/db/migrations",
+			"remote": true
 		}
 	]
 }

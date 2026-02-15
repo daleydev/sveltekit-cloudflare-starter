@@ -1,3 +1,5 @@
+import type { BetterAuth } from '$lib/server/auth';
+import type { DrizzleDB } from '$lib/server/db';
 import type { User, Session } from 'better-auth';
 import { drizzle } from 'drizzle-orm/d1';
 
@@ -22,7 +24,8 @@ declare global {
 
 		// interface Error {}
 		interface Locals {
-			db: ReturnType<typeof drizzle>;
+			db: DrizzleDB;
+			auth: BetterAuth;
 		}
 		// interface PageData {}
 		// interface PageState {}
